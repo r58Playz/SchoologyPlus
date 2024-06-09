@@ -64,6 +64,7 @@
 	function c_r_getURL(ext_url) {
 		console.debug("ExtAPIStubs: Redirected chrome.runtime.getURL");
 		if (ext_url === "/theme-editor.html") return "/sPlusBookmarkletTricksExtensionForThemeEditor"
+		if (ext_url.startsWith("/")) return hosting_url.slice(0, -1) + ext_url
 		return hosting_url + ext_url
 	}
 	globalThis.chrome.storage = c_storage;
