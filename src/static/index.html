@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" \>
+  <meta name="og:title" content="Schoology Plus Bookmarklet" \>
+  <meta name="og:description" content="A port of Schoology Plus to the open web." \>
+  <meta name="description" content="A port of Schoology Plus to the open web." \>
+  <meta name="viewport" content="width=device-width" \>
+  <title>Schoology Plus Bookmarklet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <meta name="darkreader-lock" \>
+  <link rel="icon" href="imgs/icon@64.png" \>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="center">Schoology Plus Bookmarklet</h1>
+    <div class="github-icon-wrapper">
+      <a href="https://github.com/r58Playz/SPlus-Bookmarklet" aria-label="Schoology Plus Bookmarklet Github">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="colorMask1">
+              <feFlood flood-color="currentColor" result="flood" />
+              <feComposite in="flood" in2="SourceAlpha" operator="atop" />
+            </filter>
+          </defs>
+          <image width="100%" height="100%" xlink:href="/github.svg" filter="url(#colorMask1)" />
+        </svg>
+      </a>
+    </div>
+    <p>
+      A port of Schoology Plus to the open web. Supports injection via uBlock Origin. See
+      <a href="https://schoologypl.us">the actual Schoology Plus site</a> as well,
+      but don't ask for support there!
+    </p>
+    <h2 class="center">Instal</h2>
+    <p>
+    <ol>
+      <li>Open uBlock Origin settings.</li>
+      <li>Scroll down to Advanced.</li>
+      <li>Check the box "I am an advanced user"</li>
+      <li>Click on the settings next to "I am an advanced user"</li>
+      <li>In the opened tab, remove <pre>unset</pre> after <pre>userResourcesLocation</pre>. (If you have a URL in there
+        already, just add a space and append the URL in the next step)</li>
+      <li>Type in <pre>https://splus.r58playz.dev/ubo-resources</pre>.</li>
+      <li>Close the advanced settings tab.</li>
+      <li>Click on the "My filters" tab in uBlock Origin settings.</li>
+      <li>Add <pre>&lt;schoology_subdomain&gt;##+js(sPlus.js)</pre> to a new line.
+        Replace <pre>&lt;schoology_subdomain&gt;</pre> with your Schoology URL.</li>
+      <li>Make sure your Schoology domain has uBlock Origin enabled.</li>
+      <li>Schoology Plus should now load.</li>
+    </ol>
+    </p>
+  </div>
+</body>
+
+</html>

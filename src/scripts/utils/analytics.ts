@@ -35,27 +35,15 @@ export var trackEvent = function (
 };
 
 export async function getAnalyticsUserId() {
-    function getRandomToken() {
-        // E.g. 8 * 32 = 256 bits token
-        var randomPool = new Uint8Array(32);
-        crypto.getRandomValues(randomPool);
-        var hex = "";
-        for (var i = 0; i < randomPool.length; ++i) {
-            hex += randomPool[i].toString(16);
-        }
-        // E.g. db18458e2782b2b77e36769c569e263a53885a9944dd0a861e5064eac16f1a
-        return hex;
-    }
-
-    let l: { randomUserId?: string } = await chrome.storage.local.get({ randomUserId: null });
-
-    if (!l.randomUserId) {
-        let randomUserId = getRandomToken();
-        await chrome.storage.local.set({ randomUserId });
-        return randomUserId;
-    }
-
-    return l.randomUserId;
+	// E.g. 8 * 32 = 256 bits token
+	var randomPool = new Uint8Array(32);
+	crypto.getRandomValues(randomPool);
+	var hex = "";
+	for (var i = 0; i < randomPool.length; ++i) {
+		hex += randomPool[i].toString(16);
+	}
+	// E.g. db18458e2782b2b77e36769c569e263a53885a9944dd0a861e5064eac16f1a
+	return hex;
 }
 
 export async function initializeAnalytics({
@@ -77,6 +65,7 @@ export async function initializeAnalytics({
     randomUserId: string;
     themeIsModern: string;
 }) {
+	return;
     if (isAnalyticsEnabled) {
         enableAnalytics();
     }

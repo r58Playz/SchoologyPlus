@@ -62,7 +62,7 @@ async function load() {
         themeIsModern: document.documentElement.getAttribute("modern") ?? "false",
     });
 
-    defaultDomain = __storage.defaultDomain || "app.schoology.com";
+    defaultDomain = location.host;
 
     if (isLAUSD()) {
         setCSSVariable("lausd-visible", "block");
