@@ -56,8 +56,8 @@
 	}
 	function c_r_getManifest() {
 		return {
-			'version_name': '7.0 (uBlock) [S+ version 10.0.1]',
-			'version': '10.0.1'
+			'version_name': '7.0 (uBlock) [S+ version 10.1.0]',
+			'version': '10.1.0'
 		}
 	}
 
